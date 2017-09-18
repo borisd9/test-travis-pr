@@ -1,0 +1,21 @@
+language: node_js
+node_js:
+  - "6"
+sudo: enabled
+script:
+- if [ "$TRAVIS_PULL_REQUEST" != "false" ]; then echo "Building PR"; fi
+- npm run build
+branches:
+  only:
+  - master
+  - /^(rc-).+$/
+deploy:
+  provider: npm
+  email: wix7456@gmail.com
+  skip_cleanup: true
+  api_key:
+    secure: pYziNaavtXXeyflrZQoMBGCE/nJKfDWQ06wZ4SIPzlccJCHq4sJu2gyg6nSEh2AEJ3sLTjUfPFG6XZEJ37tCdDaBjwq1J8TCxQle2Fkny/0EQ9bAl5q7ycrXhiLxwoJpxdZrY4ZP0ZnRj0Djpjc7MQ9kFXq9zlbnbIXoEfAUanOR7wYpkkrQfRSHTMPelpOWyDHxkU1efQYH4X84+PTi5KNesOq+ysJxU5+lixIQdLFYrOLUt6qWfkMyX0ELtUv3sWDMA2BI64XuVoR1OCEHHkCTf/GcaQFLKFH28cK4DY+2BuqL8vCrW+deJmtDAZJfhaPexA986ygs03N9rA255WX14kcQZICy7d7Jopi/fd8L2bOFaM2dhzBNr0iTkUMLO5Z8uCpyyw6TupZGymsA6zgubbAcWNVPtBBDZ5tg1kMWL9v5Tq1DWfAtTjf+a2nA4sirWurmS/+l0C1LFW16cAtDDrENvIdrzDJVB+nBnUvJVQFlEO1Y3NyMKfkTuZC6j3DyEvU8Sw9ClJvXvWiR4AorNJR0hp/peq03cars+rwcxmcKN/ZQEXJlzlC/1PnjlEiChTYoNHRn7l45zUenNuNyFJB9ajDC2IZ1HnL94PAtfqbIMtzmR5MjUYrLwFSnwPLTBtlt9hIpFV/TLQZ1DORW5LNqpq2VyyWI0OR/oqA=
+  on:
+    all_branches: true
+
+

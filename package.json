@@ -1,0 +1,20 @@
+{
+  "name": "test-travis-pr",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "sleep 2 && echo 2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/borisd9/test-travis-pr.git"
+  },
+  "author": "borisd <wix7456@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/borisd9/test-travis-pr/issues"
+  },
+  "homepage": "https://github.com/borisd9/test-travis-pr#readme"
+}
